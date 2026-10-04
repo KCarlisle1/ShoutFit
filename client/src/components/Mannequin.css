@@ -1,0 +1,148 @@
+#mannequin-container{
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 48px auto;
+    margin-bottom: var(--small);
+    border: 2px solid var(--base-orange02);
+    box-shadow: inset 0px 0px 4px var(--base-orange02);
+    border-radius: var(--small);
+    background: linear-gradient(to bottom, white 1%, var(--base-cream));
+}
+
+#paper-background,
+#mannequin-img,
+.top,
+.bottom,
+.shoe,
+#eyes-img,
+#mouth-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#eyes-img,
+#mouth-img{
+    z-index: 55;
+}
+
+/*TOP*/
+
+#top-outline{
+    z-index: 55
+}
+
+#top-fill{
+    z-index: 50;
+}
+
+/*BOTTOM*/
+
+#bottom-outline{
+    z-index: 45
+}
+
+#bottom-fill{
+    z-index: 40
+}
+
+/*SHOE*/
+
+#shoe-outline{
+    z-index: 35
+}
+
+#shoe-fill{
+    z-index: 30
+}
+/*OTHER*/
+
+#paper-background{
+    z-index: 10;
+}
+
+#mannequin-img{
+    z-index: 20;
+}
+
+.left-arrow,
+.right-arrow{
+    position: relative;
+    z-index: 60;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    aspect-ratio: auto;
+    padding: 0;
+    width: 160px;
+    height: 160px;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+}
+
+#left-arrows-container,
+#right-arrows-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--large);
+    position: absolute;
+    top: 160px;
+}
+
+#left-arrows-container{
+    left: -90px;
+}
+
+#right-arrows-container{
+    right: -90px;
+}
+
+.left-arrow{
+    background-image: url(./src/assets/leftarrow.PNG);
+}
+
+.left-arrow:hover{
+    background-image: url(./src/assets/leftarrowhover.PNG);
+}
+
+.right-arrow{
+    background-image: url(./src/assets/rightarrow.PNG);
+}
+
+.right-arrow:hover{
+    background-image: url(./src/assets/rightarrowhover.PNG);
+}
+
+@media(max-width: 719px){ /*MOBILE PHONES*/
+    #mannequin-container{
+        width: 400px;
+        height: 400px;
+        margin: 20px auto;
+    }
+
+    .left-arrow,
+    .right-arrow{
+        width: 80px;
+        height: 80px;
+    }
+
+    #left-arrows-container,
+    #right-arrows-container{
+        gap: var(--small);
+        top: 80px;
+    }
+
+    #left-arrows-container{
+        left: -45px;
+    }
+
+    #right-arrows-container{
+        right: -45px;
+    }
+}

@@ -1,0 +1,89 @@
+:root{
+  /*WEBSITE PALETTE*/
+  --base-blue: #a0dfdd;
+  --base-cream: #ffe3cb;
+  --base-orange01: #ffb679;
+  --base-orange02: #e99045;
+  --base-orange03: #db6d38;
+  --base-orange04: #b54c28;
+
+  /*CLOTHING COLORS*/
+  --red: #eb6363;
+  --orange: #eba163;
+  --yellow: #ebc863;
+  --light-green: #a1eb63;
+  --dark-green: #4f9056;
+  --light-blue: #63e2eb;
+  --dark-blue: #637aeb;
+  --purple: #ba63eb;
+  --pink: #eb63a3;
+  --black: #4e4e4e;
+  --white: #fff9e9;
+  --brown: #7c614a;
+
+  /*STANDARD SIZING*/
+  --large: 48px;
+  --small: 16px;
+
+}
+
+body {
+  text-align: center;
+  background-color: var(--base-blue);
+  font-family: "DynaPuff", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#spiral-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./src/assets/spiral.PNG');
+    background-repeat: repeat;
+    background-size: 280px 280px;
+    background-position: top left;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.04;
+}
+
+#page-title{
+  color: white;
+  text-shadow: 5px 5px 5px var(--base-orange04);
+  font-size: 64px;
+  text-align: left;
+  background: linear-gradient(to bottom, var(--base-cream) 1%, var(--base-orange01));
+  display: block;
+  width: fit-content;
+  border: 2px solid var(--base-orange03);
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px var(--base-orange03);
+  padding: var(--small);
+  margin: 20px;
+}
+
+footer{
+  width: 100%;
+  margin-top: var(--small);
+  background: linear-gradient(to bottom, var(--base-blue) 1%, white);
+  padding: var(--small);
+  color: var(--base-orange04);
+}
+
+@media(max-width: 719px){ /*MOBILE PHONES*/
+
+  #spiral-background{
+    background-size: 100px 100px;
+  }
+
+  #page-title{
+    font-size: var(--large);
+    padding: var(--small);
+    margin: var(--small);
+    margin-bottom: var(--large);
+  }
+}

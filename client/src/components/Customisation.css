@@ -1,0 +1,247 @@
+#customisation-container{
+    background: linear-gradient(to bottom, var(--base-orange01) 1%, var(--base-orange02));
+    width: 1000px;
+    margin: var(--small) auto;
+    border: 2px solid var(--base-orange03);
+    box-shadow: inset 0px 0px 4px var(--base-orange03);
+    border-radius: var(--small);
+    padding: var(--small);
+}
+
+#customisation-container p{
+    word-spacing: 6px;
+}
+
+#outfit-title{
+    display: block;
+    font-size: var(--large);
+    background: var(--base-cream);
+    border: 2px solid var(--base-orange02);
+    border-radius: var(--small);
+    font-family: "DynaPuff", sans-serif;
+    font-weight: normal;
+    color: var(--base-orange04);
+    padding: 4px;
+    letter-spacing: 1px;
+}
+
+.clothing-info{
+    display: flex;
+    align-items: center;
+    gap: var(--small);
+}
+
+.clothing-name{
+    width: 70%;
+    text-align: left;
+    font-size: 36px;
+    padding: 0 var(--small);
+    text-shadow: 2px 2px 0 var(--base-cream);
+    margin-bottom: var(--small);
+}
+
+.change-colour{
+    font-size: 24px;
+    color: var(--base-orange04);
+}
+
+.color-display{
+    width: var(--large);
+    height: var(--large);
+    border: 2px solid var(--base-orange02);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.color-display:hover{
+    background-color: var(--base-orange03);
+}
+
+#post-btn{
+    font-size: var(--large);
+    text-align: center;
+    text-shadow: 2px 2px 2px white;
+    margin: 0 auto;
+    font-family: "DynaPuff", sans-serif;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: var(--small);
+    background: linear-gradient(to bottom, white 1%, var(--base-blue));
+    cursor: pointer;
+}
+
+#post-btn:hover{
+    background: linear-gradient(to bottom, var(--base-orange02), var(--base-orange04));
+    border: 2px solid var(--base-orange02);
+    text-shadow: 2px 2px 2px var(--base-orange04);
+    color: white;
+}
+
+#colour-select-container.hidden {
+  display: none;
+}
+
+#colour-select-container.visible {
+  display: grid;
+}
+
+#colour-select-container {
+    position: absolute;
+    top: 1020px;
+    right: 60px;
+    background: linear-gradient(to bottom, var(--base-cream), var(--base-blue));
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--small);
+    align-items: center;
+    justify-items: center;
+    padding: var(--small);
+    z-index: 60;
+    border: 2px solid var(--base-orange02);
+    border-radius: var(--small);
+}
+
+.colour-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--small);
+}
+
+#close-btn{
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    z-index: 70;
+    width: var(--large);
+    height: var(--large);
+    border: 2px solid var(--base-orange02);
+    border-radius: 5px;
+    background-color: var(--base-orange04);
+    color: var(--base-cream);
+    font-family: "DynaPuff", sans-serif;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+#close-btn:hover{
+    background-color: white;
+    color: var(--base-blue);
+    border: 2px solid var(--base-cream);
+}
+
+.colour-name{
+    color: var(--base-orange04);
+    text-align: right;
+    text-shadow: 2px 2px 0 white;
+}
+
+.colour-btn{
+    width: var(--large);
+    height: var(--large);
+    border: 2px solid var(--base-orange02);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#red-btn{
+    background-color: var(--red);
+}
+
+#orange-btn{
+    background-color: var(--orange);
+}
+
+#yellow-btn{
+    background-color: var(--yellow);
+}
+
+#light-green-btn{
+    background-color: var(--light-green);
+}
+
+#dark-green-btn{
+    background-color: var(--dark-green);
+}
+
+#light-blue-btn{
+    background-color: var(--light-blue);
+}
+
+#dark-blue-btn{
+    background-color: var(--dark-blue);
+}
+
+#purple-btn{
+    background-color: var(--purple);
+}
+
+#pink-btn{
+    background-color: var(--pink);
+}
+
+#black-btn{
+    background-color: var(--black);
+}
+
+#white-btn{
+    background-color: var(--white);
+}
+
+#brown-btn{
+    background-color: var(--brown);
+}
+
+@media(max-width: 719px){ /*MOBILE PHONES*/
+    #customisation-container{
+        width: 400px;
+    }
+
+    #customisation-container p{
+        word-spacing: 4px;
+    }
+
+    #outfit-title{
+        font-size: 24px;
+        letter-spacing: normal;
+    }
+
+    .clothing-name,
+    .change-colour{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .color-display{
+        width: 26px;
+        height: 26px;
+    }
+
+    #post-btn{
+        font-size: 30px;
+        margin: 0 auto;
+        padding: 8px;
+    }
+
+    #colour-select-container {
+        top: 600px;
+        right: 10px;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    #close-btn{
+        top: -8px;
+        right: -8px;
+        width: 26px;
+        height: 26px;
+        font-size: 16px;
+    }
+
+    .colour-name{
+        font-size: 12px;
+    }
+
+    .colour-btn{
+        width: 26px;
+        height: 26px;
+    }
+}
